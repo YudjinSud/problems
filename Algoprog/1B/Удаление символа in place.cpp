@@ -12,8 +12,7 @@ int32_t main() {
     char s[1000000];
     scanf("%s", s);
     int offset = 0, len = strlen(s);
-    if(s[0] == '@') offset++;
-    for(int i = 1; i < len; i++) {
+    for(int i = 0; i < len; i++) {
         s[i-offset] = s[i];
         if(s[i] == '@') offset++;
     }
