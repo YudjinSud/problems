@@ -4,31 +4,22 @@
 
 using namespace std;
 
+int gcd(int a, int b) {
+    if (b == 0) return a;
+    else return gcd(b, a % b);
+}
+
 int32_t main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
 
-    int n, k, x;
-    cin >> n;
-    int keyboard[n];
-    for (int i = 0; i < n; i++) {
-        cin >> keyboard[i];
+    int x, res = 0;
+    while ((cin >> x) && x != 0) {
+        if (x % 2 == 0)
+            res++;
     }
-
-    cin >> k;
-
-    for(int i = 0; i < k; i++) {
-        cin >> x;
-        keyboard[x-1]--;
-    }
-    for(int i = 0; i < n; i++) {
-        if(keyboard[i] < 0) {
-            cout << "yes\n";
-        } else {
-            cout << "no\n";
-        }
-    }
+    cout << res;
 
     return 0;
 }
