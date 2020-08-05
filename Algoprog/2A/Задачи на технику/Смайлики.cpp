@@ -1,3 +1,7 @@
+//
+// Created by yudjin on 8/5/20.
+//
+
 #include <bits/stdc++.h>
 
 #define int long long
@@ -23,8 +27,8 @@ int32_t main() {
         i++;
         while(s[i] == '-')i++;
         if(is_par(s[i])) {
-           while(is_par(s[i])) i++;
-           res++;
+            while(is_par(s[i])) i++;
+            res++;
         }
     }
     cout << res;
