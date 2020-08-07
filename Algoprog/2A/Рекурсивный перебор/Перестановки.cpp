@@ -10,8 +10,8 @@
 
 using namespace std;
 
-int m[sz];
-int visited[sz];
+vi m(sz);
+vi visited(sz);
 int k, n;
 
 void check() {
@@ -43,9 +43,6 @@ int32_t main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    for(long long & i : visited) {
-        i = 0;
-    }
     cin >> n;
     find(0);
     return 0;

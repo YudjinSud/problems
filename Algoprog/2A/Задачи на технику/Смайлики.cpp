@@ -22,8 +22,8 @@ int32_t main() {
     getline(cin, s);
 
     int i = 0, res = 0;
-    while(i < s.size()) {
-        while(s[i] != ';' && s[i] != ':' && i < s.size()) i++;
+    while(i < s.size()-1) { // более того, выход был еще и тут, когда i++ ниже давало s.size()
+        while(i < s.size() && s[i] != ';' && s[i] != ':') i++;
         i++;
         while(s[i] == '-')i++;
         if(is_par(s[i])) {
